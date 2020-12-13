@@ -1,0 +1,14 @@
+
+  type Cat {
+    _id: String!
+    name: String!
+  }
+
+  type Query {
+    getCats: [Cat!]!
+    getCat(name: String, _id: String): Cat
+  }
+
+  type Mutation {
+    createCat(name: String!): Cat!
+  }

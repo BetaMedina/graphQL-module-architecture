@@ -1,0 +1,17 @@
+
+  type Todo {
+    _id: String!
+    title: String
+    status: String
+    assigned: String
+  }
+
+  type Query {
+    getTodos: [Todo!]!
+    getTodo(assigned: String, status: String, _id: String): Todo
+  }
+
+  type Mutation {
+    createTodo(title: String, status: String, assigned: String): Todo!
+    updateStatus(_id: String, status: String, assigned: String): Todo!
+  }

@@ -1,0 +1,19 @@
+
+
+type User {
+  _id: String!
+  email: String
+  password: String
+  name: String
+}
+
+
+
+type Query {
+  getUserByMail(email: String): User
+  getUserById(_id: String): User
+}
+
+type Mutation {
+  createUser(email: String, password: String, name: String): User!
+}
